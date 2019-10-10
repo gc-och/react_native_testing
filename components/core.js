@@ -41,7 +41,7 @@ export class Core extends Component {
     }
 
     test() {
-        this.board.changeCell([5, 5], 5);
+        this.board.changeCell([5, 5], 11);
         this.setState({
             ru: !this.state.ru
         });
