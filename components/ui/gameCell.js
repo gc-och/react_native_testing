@@ -4,11 +4,26 @@ import { StyleSheet, Text, View } from 'react-native';
 const BUILDING_DATA = require('../../resources/buildingTypes.json');
 
 export class GameCell extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            background: BUILDING_DATA[this.props.data]["appearance"]
+        };
+    }
     render() {
-        var background = {backgroundColor: BUILDING_DATA[this.props.data]};
+        var background = {backgroundColor: this.state.background};
         return(
-            <View style={[styles.gameCell, background]}></View>
+            <TouchableWithoutFeedback onPress={this.handleTouch}>
+                <View style={[styles.gameCell, background]}></View>
+            </TouchableWithoutFeedback>
         );
+    }
+
+    handleTouch() {
+        this.setState({
+            background: 'red'
+        })
     }
 }
 
