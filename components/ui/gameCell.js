@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+const BUILDING_DATA = require('../../resources/buildingTypes.json');
+
 export class GameCell extends Component {
     render() {
-        var background = {};
-        switch (this.props.data) {
-            case 0:
-                background = {backgroundColor: 'red'};
-                break;
-            case 5:
-                background = {backgroundColor: 'blue'};
-                break;
-        }
+        var background = {backgroundColor: BUILDING_DATA[this.props.data]};
         return(
             <View style={[styles.gameCell, background]}></View>
         );

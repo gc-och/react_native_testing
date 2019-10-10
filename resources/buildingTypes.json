@@ -1,0 +1,18 @@
+{
+    "0": {
+        "name": "land",
+        "appearance": "green"
+    },
+    "10": {
+        "name": "wall",
+        "appearance": "red"
+    },
+    "11": {
+        "name": "road",
+        "appearance": "blue"
+    },
+    "12": {
+        "name": "house",
+        "appearance": "yellow"
+    }
+}
